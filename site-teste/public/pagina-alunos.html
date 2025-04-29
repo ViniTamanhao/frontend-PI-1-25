@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Área dos Alunos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-image: url('/src/assets/background2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 3rem;
+    }
+
+    .form-wrapper {
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 800px;
+      margin: 3rem auto 2rem auto;
+    }
+
+    .form-wrapper h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-weight: 500;
+      display: block;
+      margin-top: 1rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #213547;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      font-weight: 500;
+    }
+
+    button:hover {
+      background-color: #394867;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .back-link {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1.1rem;
+      color: #213547;
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+
+    .back-link i {
+      margin-right: 8px;
+    }
+
+    .back-link:hover {
+      color: #394867;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="/" class="back-link"><i class="fa fa-arrow-left"></i> Voltar à página inicial</a>
+
+  <div class="form-wrapper">
+    <section class="form-section">
+      <h2>Formulário do Parecer</h2>
+      <form id="form-parecer">
+
+        <label for="prontuario">Número do Prontuário:</label>
+        <input type="text" id="prontuario" name="prontuario" required />
+
+        <label for="nome-paciente">Nome do Paciente:</label>
+        <input type="text" id="nome-paciente" name="nome-paciente" required />
+
+        <label for="data-nascimento">Data de Nascimento:</label>
+        <input type="date" id="data-nascimento" name="data-nascimento" required />
+
+        <label for="data-internacao">Data de Internação:</label>
+        <input type="date" id="data-internacao" name="data-internacao" />
+        <button type="button" id="add-internacao">Adicionar Data de Internação</button>
+        <div id="internacoes-container"></div>
+
+        <label for="data-solicitacao">Data de Solicitação:</label>
+        <input type="date" id="data-solicitacao" name="data-solicitacao" required />
+
+        <label for="setor-internacao">Setor onde o Paciente está Internado:</label>
+        <input type="text" id="setor-internacao" name="setor-internacao" required />
+
+        <label for="data-resposta">Data de Resposta:</label>
+        <input type="date" id="data-resposta" name="data-resposta" required />
+
+        <label for="data-alta">Data de Alta:</label>
+        <input type="date" id="data-alta" name="data-alta" required />
+
+        <label for="tipo-alta">Tipo de Alta:</label>
+        <input type="text" id="tipo-alta" name="tipo-alta" />
+
+        <label for="observacao">Observação Geral:</label>
+        <textarea id="observacao" name="observacao"></textarea>
+
+        <label for="sexo-paciente">Sexo do Paciente:</label>
+        <select id="sexo-paciente" name="sexo-paciente" required>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+          <option value="nao-informado">Não Informado</option>
+        </select>
+
+        <label>Houve Atendimento à Família?</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="atendimento-familia" value="sim" /> Sim
+          </label>
+          <label>
+            <input type="radio" name="atendimento-familia" value="nao" /> Não
+          </label>
+        </div>
+
+        <div id="familia-extra-campos" style="display: none;">
+         <label for="qtd-atendimentos">Quantos atendimentos à família?</label>
+         <input type="number" id="qtd-atendimentos" name="qtd-atendimentos" min="0" />
+
+         <label for="local-moradia">Local de Moradia (Opcional):</label>
+         <input type="text" id="local-moradia" name="local-moradia" />
+
+         <label for="grau-instrucao">Grau de Instrução:</label>
+         <input type="text" id="grau-instrucao" name="grau-instrucao" />
+        </div>
+
+        <label for="nome-aluno">Nome do Aluno Responsável:</label>
+        <input type="text" id="nome-aluno" name="nome-aluno" required />
+
+        <button type="submit">Enviar Parecer</button>
+      </form>
+    </section>
+  </div>
+
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('form-parecer');
+      const addBtn = document.getElementById('add-internacao');
+      const container = document.getElementById('internacoes-container');
+
+      if (addBtn && container) {
+        addBtn.addEventListener('click', () => {
+          const input = document.createElement('input');
+          input.type = 'date';
+          input.name = 'data-internacao';
+          input.style.marginTop = '0.5rem';
+          container.appendChild(input);
+        });
+      }
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          window.location.href = '/pagina-sucesso.html';
+        });
+      }
+      
+      const atendimentoRadios = document.querySelectorAll('input[name="atendimento-familia"]');
+      const extraCampos = document.getElementById('familia-extra-campos');
+
+      atendimentoRadios.forEach(radio => {
+  radio.addEventListener('change', () => {
+      if (radio.value === 'sim' && radio.checked) {
+      extraCampos.style.display = 'block';
+    } else if (radio.value === 'nao' && radio.checked) {
+      extraCampos.style.display = 'none';
+    }
+  });
+});
+
+      
+    });
+  </script>
+</body>
+</html>
+
