@@ -1,0 +1,29 @@
+/* Estilos globais para todo o site */
+
+/* Reset de margens e padding */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Aplica a imagem de fundo ao site inteiro */
+html, body {
+  height: 100%; /* Garante que o body ocupe toda a altura */
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #242424; /* Cor de fundo escura */
+  color: rgba(255, 255, 255, 0.87); /* Cor do texto */
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: url('/src/assets/background2.jpg'); /* Caminho correto para sua imagem */
+  background-size: cover;  /* Faz a imagem cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Garante que a imagem não se repita */
+}
+

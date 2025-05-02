@@ -1,0 +1,149 @@
+.formulario-page {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('/src/assets/background2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 3rem;
+  box-sizing: border-box;
+}
+
+.formulario-page .form-wrapper {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 800px;
+  margin: 3rem auto 2rem auto;
+}
+
+.formulario-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #213547;
+}
+
+.formulario-page label {
+  font-weight: 500;
+  display: block;
+  color: #213547;
+  margin-top: 1rem;
+}
+
+.formulario-page input,
+.formulario-page select,
+.formulario-page textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.formulario-page textarea {
+  height: 100px;
+}
+
+.formulario-page button {
+  padding: 12px 20px;
+  background-color: #213547;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+.formulario-page button:hover {
+  background-color: #394867;
+}
+
+.formulario-page .radio-group {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.formulario-page .radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.formulario-page .back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.1rem;
+  color: #213547;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.formulario-page .back-link i {
+  margin-right: 8px;
+}
+
+.formulario-page .back-link:hover {
+  color: #394867;
+}
+
+.formulario-page #familia-extra-campos {
+  margin-top: 1rem;
+}
+
+.formulario-page .form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Alinha o label e o input lado a lado */
+.formulario-page .form-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Ajusta o tamanho dos labels */
+.formulario-page label {
+  width: 30%;  /* O label ocupará 30% da largura */
+  margin-top: 0;
+}
+
+/* Ajusta o tamanho dos inputs */
+.formulario-page input,
+.formulario-page select,
+.formulario-page textarea {
+  width: 65%; /* O input ocupará 65% da largura */
+}
+
+@media (max-width: 768px) {
+  /* Torna os inputs e labels responsivos para dispositivos menores */
+  .formulario-page .form-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .formulario-page label {
+    width: 100%; /* Labels ocupam 100% da largura */
+  }
+
+  .formulario-page input,
+  .formulario-page select,
+  .formulario-page textarea {
+    width: 100%; /* Inputs ocupam 100% da largura */
+  }
+}

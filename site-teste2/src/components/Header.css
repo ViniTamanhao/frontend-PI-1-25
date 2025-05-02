@@ -1,0 +1,69 @@
+.hero {
+  position: relative;
+  background-image: url('/src/assets/background2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 0 2rem;
+  color: white;
+  min-height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-spacer {
+  flex: 0 0 10%; /* espaço fixo à esquerda */
+}
+
+.hero-text {
+  flex: 1 1 80%; /* texto ocupa mais espaço */
+  text-align: center;
+  white-space: nowrap; /* impede quebra de linha */
+  overflow: hidden;
+  text-overflow: ellipsis; /* opcional: mostra "..." se estourar */
+}
+
+.hero-logo {
+  flex: 0 0 10%; /* logo ocupa espaço fixo à direita */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-logo img {
+  height: 80px;
+}
+
+.hero-text h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hero-text p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+

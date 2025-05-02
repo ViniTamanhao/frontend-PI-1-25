@@ -1,0 +1,56 @@
+/* Estilo para a navegação */
+.nav {
+  background-color: #f2f2f2;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Estilo para links (a) dentro da navegação */
+.nav a {
+  color: #000; /* Cor padrão do link */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: 500; /* Para deixar o texto um pouco mais forte */
+}
+
+/* Estilo para links quando estão visitados */
+.nav a:visited {
+  color: #000; /* Mantém a cor do link visitado como preto (ou qualquer cor que desejar) */
+}
+
+/* Estilo para o link ativo (quando a rota estiver ativa) */
+.nav a.active {
+  color: #213547; /* Cor para o link ativo */
+  font-weight: bold; /* Pode deixar o texto em negrito para dar mais destaque */
+}
+
+/* Estilo quando o link é clicado */
+.nav a:active {
+  color: #394867; /* Cor para o link enquanto ele está sendo clicado */
+}
+
+/* Estilo para os botões do menu */
+.nav .menu-btn {
+  background-color: #213547;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav .menu-btn:hover {
+  background-color: #394867;
+}
+

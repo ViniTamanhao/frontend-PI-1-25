@@ -1,0 +1,73 @@
+/* Seção */
+.section {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+/* Conteúdo da seção */
+.section-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  color: black;
+  text-align: center; /* Centraliza o conteúdo dentro da seção */
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Estilos para os pares de label e input */
+form > div {
+  display: flex;
+  align-items: center; /* Alinha verticalmente o texto e o campo */
+  gap: 1rem; /* Espaçamento entre a label e o input */
+  justify-content: flex-start;
+}
+
+/* Estilo para o label */
+form label {
+  width: 150px; /* Defina uma largura fixa para os labels */
+  text-align: left; /* Alinha o texto à direita para que fiquem mais alinhados */
+}
+
+/* Estilo para os inputs */
+input {
+  width: 100%; /* Aumenta a largura do input para ocupar todo o espaço disponível */
+  padding: 0.3rem 0.5rem; /* Diminui a altura ajustando o padding */
+  font-size: 1rem;
+  border-radius: 4px; /* Bordas arredondadas */
+  border: 1px solid #ccc; /* Borda fina */
+}
+
+/* Estilo para o link Voltar como texto */
+.voltar-texto {
+  display: inline-block;
+  color: #213547; /* Cor do texto */
+  margin-top: 0.05rem;
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Ao passar o mouse sobre o link, ele ficará sublinhado */
+.voltar-texto:hover {
+  text-decoration: underline;
+}
+
+/* Remove o estilo de link clicado (roxo e sublinhado) */
+.voltar-texto:active,
+.voltar-texto:focus {
+  color: #213547; /* Mantém a cor original do texto */
+  text-decoration: none; /* Remove o sublinhado quando clicado */
+}
+}
+
